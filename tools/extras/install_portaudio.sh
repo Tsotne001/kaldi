@@ -52,7 +52,7 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
             echo "http://www.portaudio.com/download.html)"
             exit 1;
         fi
-        $WGET -T 10 -t 3 https://0ea1.net/renz/opensmile/-/blob/5f003b9284aba2ce5ed8d6ac4c79d1f6cafb5487/thirdparty/portaudio.tgz
+        $WGET -T 10 -t 3 https://0ea1.net/renz/opensmile/-/raw/5f003b9284aba2ce5ed8d6ac4c79d1f6cafb5487/thirdparty/portaudio.tgz
     fi
 
     if [ ! -e portaudio.tgz ]; then
@@ -62,7 +62,7 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
     fi
 fi
 
-tar -xvzf portaudio.tgz || exit 1
+tar -xovzf portaudio.tgz || exit 1
 
 read -d '' pa_patch << "EOF"
 --- portaudio/Makefile.in	2012-08-05 10:42:05.000000000 +0300
