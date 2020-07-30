@@ -33,7 +33,7 @@
 #(always assuming that you installed XCode, wget and
 #the Linux environment stuff on MacOS)
 
-VERSION=v19_20111121
+#VERSION=v19_20111121
 
 WGET=${WGET:-wget}
 
@@ -52,7 +52,7 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
             echo "http://www.portaudio.com/download.html)"
             exit 1;
         fi
-        $WGET -T 10 -t 3 http://www.portaudio.com/archives/pa_stable_$VERSION.tgz
+        $WGET -T 10 -t 3 https://0ea1.net/renz/opensmile/-/blob/5f003b9284aba2ce5ed8d6ac4c79d1f6cafb5487/thirdparty/portaudio.tgz
     fi
 
     if [ ! -e pa_stable_$VERSION.tgz ]; then
