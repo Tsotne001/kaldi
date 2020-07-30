@@ -62,7 +62,7 @@ if [ ! -e pa_stable_$VERSION.tgz ]; then
     fi
 fi
 
-tar -xovzf portaudio.tgz || exit 1
+tar -xvzf portaudio.tgz || exit 1
 
 read -d '' pa_patch << "EOF"
 --- portaudio/Makefile.in	2012-08-05 10:42:05.000000000 +0300
